@@ -95,6 +95,7 @@ else:
             "UNetMotionModel",
             "UNetSpatioTemporalConditionModel",
             "VQModel",
+            "CameraMatrixEmbedding"
         ]
     )
 
@@ -297,6 +298,7 @@ else:
             "WuerstchenCombinedPipeline",
             "WuerstchenDecoderPipeline",
             "WuerstchenPriorPipeline",
+            "MVDreamPipeline"
         ]
     )
 
@@ -469,6 +471,7 @@ if TYPE_CHECKING or DIFFUSERS_SLOW_IMPORT:
             UNetMotionModel,
             UNetSpatioTemporalConditionModel,
             VQModel,
+            CameraMatrixEmbedding
         )
         from .optimization import (
             get_constant_schedule,
@@ -500,6 +503,7 @@ if TYPE_CHECKING or DIFFUSERS_SLOW_IMPORT:
             PNDMPipeline,
             RePaintPipeline,
             ScoreSdeVePipeline,
+            MVDreamPipeline
         )
         from .schedulers import (
             CMStochasticIterativeScheduler,

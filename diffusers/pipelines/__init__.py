@@ -203,6 +203,9 @@ else:
         "WuerstchenDecoderPipeline",
         "WuerstchenPriorPipeline",
     ]
+    _import_structure["mvdream"] = [
+        "MVDreamPipeline"
+    ]
 try:
     if not is_onnx_available():
         raise OptionalDependencyNotAvailable()
@@ -415,6 +418,7 @@ if TYPE_CHECKING or DIFFUSERS_SLOW_IMPORT:
             StableUnCLIPImg2ImgPipeline,
             StableUnCLIPPipeline,
         )
+        from .mvdream import MVDreamPipeline
         from .stable_diffusion_safe import StableDiffusionPipelineSafe
         from .stable_diffusion_xl import (
             StableDiffusionXLImg2ImgPipeline,
