@@ -46,6 +46,7 @@ if is_torch_available():
     _import_structure["unet_motion_model"] = ["MotionAdapter", "UNetMotionModel"]
     _import_structure["unet_spatio_temporal_condition"] = ["UNetSpatioTemporalConditionModel"]
     _import_structure["vq_model"] = ["VQModel"]
+    _import_structure["camera_proj"] = ["CameraMatrixEmbedding"]
 
 if is_flax_available():
     _import_structure["controlnet_flax"] = ["FlaxControlNetModel"]
@@ -76,7 +77,7 @@ if TYPE_CHECKING or DIFFUSERS_SLOW_IMPORT:
         from .unet_motion_model import MotionAdapter, UNetMotionModel
         from .unet_spatio_temporal_condition import UNetSpatioTemporalConditionModel
         from .vq_model import VQModel
-        from .embeddings import CameraMatrixEmbedding
+        from .camera_proj import CameraMatrixEmbedding
 
     if is_flax_available():
         from .controlnet_flax import FlaxControlNetModel
