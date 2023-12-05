@@ -76,6 +76,7 @@ if TYPE_CHECKING or DIFFUSERS_SLOW_IMPORT:
         from .unet_motion_model import MotionAdapter, UNetMotionModel
         from .unet_spatio_temporal_condition import UNetSpatioTemporalConditionModel
         from .vq_model import VQModel
+        from .embeddings import CameraMatrixEmbedding
 
     if is_flax_available():
         from .controlnet_flax import FlaxControlNetModel
