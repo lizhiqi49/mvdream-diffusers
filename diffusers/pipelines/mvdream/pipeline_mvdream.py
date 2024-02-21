@@ -930,6 +930,8 @@ class MVDreamPipeline(
 
         # 6.1 Prepare camera matrix embeddings
         if c2ws is not None:
+            if c2ws.ndim == 3:
+                c2ws = c2ws.unsqueeze(0)
             if c2ws.shape[0] != batch_size and c2ws.shape[0] != 1:
                 raise ValueError("Size mismatch between `c2ws` and batch size.")
             elif c2ws.shape[0] == 1:
