@@ -1,1 +1,0 @@
-from .pipeline_mvdream import MVDreamPipeline

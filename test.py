@@ -1,12 +1,3 @@
-# mvdream-diffusers
-Implementation of MVDream using huggingface's diffusers. 
-
-The model checkpoint of version sd-v2.1 can be found at [this huggingface page](https://huggingface.co/lzq49/mvdream-sd21-diffusers).
-
-
-## Usage
-
-```py
 import torch
 from mvdream.utils import get_camera
 from mvdream.pipeline_mvdream import MVDreamPipeline
@@ -26,6 +17,3 @@ with torch.cuda.amp.autocast(dtype=torch.float16):
         width=256,
         output_type="np"
     ).images
-
-
-```
